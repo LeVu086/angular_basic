@@ -2,11 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>Heleo PROJECT BASIC </h1>
-              <app-hello></app-hello>
-              <app-hi></app-hi>`,
+  template: `<h1>Hello PROJECT BASIC {{title}} </h1>
+  <button (click)="onButtonClick($event)"> Hide border</button>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-code-study';
+  title = 'FRIST PROJECT';
+
+  onButtonClick(event: MouseEvent) {
+    console.log('Button clicked!');
+  }
+
 }
